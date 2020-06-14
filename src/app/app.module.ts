@@ -12,6 +12,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatListModule,
     MatGridListModule,
     MatToolbarModule,
+    MatCardModule,
 
     AppRoutingModule,
     BrowserAnimationsModule,
