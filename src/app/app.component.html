@@ -1,9 +1,12 @@
-<div class="container">
+<div class="container-fluid">
 
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Angular Demo App</span>
+      <a class="title" [routerLink]="'/users/'"> <span>Angular Demo App</span></a>
     </mat-toolbar-row>
   </mat-toolbar> 
+  <div class="container">
    <router-outlet></router-outlet>
+   </div>
+
 </div>
