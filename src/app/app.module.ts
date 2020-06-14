@@ -8,6 +8,11 @@ import { UsersComponent } from './users/users.component';
 import { DetailComponent } from './detail/detail.component';
 import { HttpClientModule }    from '@angular/common/http';
 
+import { MatSliderModule } from '@angular/material/slider';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +21,12 @@ import { HttpClientModule }    from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+
+    MatSliderModule,
+    MatListModule,
+    MatGridListModule,
+    MatToolbarModule,
+
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule

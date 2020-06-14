@@ -1,1 +1,12 @@
-<p>users works! total {{total}}</p>
+<div>
+<h2 class="test">USERS</h2>
+<mat-list *ngIf="result">
+    <mat-list-item *ngFor="let item of result; let i = index">
+        <a [routerLink]="'/users/' + item.id">
+        {{i+1}}) 
+        <img src="{{item.avatar_url}}" class="avatar" alt="avatar"/> 
+        {{item.login}}
+        </a>
+    </mat-list-item>
+</mat-list>
+</div>
