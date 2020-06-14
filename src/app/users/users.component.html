@@ -9,4 +9,16 @@
         </a>
     </mat-list-item>
 </mat-list>
+
+
+<div>Current Page: {{ pages }}</div>
+<section>
+    <br/>
+    <div class="example-button-row">
+        <button mat-raised-button id="increment" (click)="increment()">Next</button>
+        <button mat-raised-button id="decrement" (click)="decrement()">Prev</button>
+        <button mat-raised-button id="reset" (click)="reset()">First</button>
+    </div>
+</section>
+
 </div>

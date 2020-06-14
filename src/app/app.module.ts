@@ -14,13 +14,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import {MatButtonModule} from '@angular/material/button'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     DetailComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     MatGridListModule,
     MatToolbarModule,
     MatCardModule,
+    MatButtonModule,
 
     AppRoutingModule,
     BrowserAnimationsModule,
