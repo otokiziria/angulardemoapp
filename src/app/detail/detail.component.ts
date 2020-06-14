@@ -13,17 +13,28 @@ export class DetailComponent implements OnInit {
 
   id
   result
+  repos
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.id = params.get('id');
     });
-    console.log(this.id)
-    if (this.id !== null || typeof this.id !== "undefined") {
-      this.http.get<any>('https://api.github.com/users/' + this.id).subscribe(data => {
-        console.log(data);
-        this.result = data;
+      this.http.get<any>('https://api.github.com/users/' + this.id).subscribe(data => this.success(data), err => this.failed(err))
+
+  }
+
+  success(data){
+    console.log(data);
+    this.result = data;
+
+    if (this.result.repos_url !== null) {
+      console.log("oto", this.result.repos_url)
+      this.http.get<any>(this.result.repos_url).subscribe(data => {
+        console.log(data, "repos");
+        this.repos = data;
       })
     }
   }
-
+  failed(err){
+    console.log(err);
+  }
 }
