@@ -27,9 +27,7 @@ export class DetailComponent implements OnInit {
     this.result = data;
 
     if (this.result.repos_url !== null) {
-      console.log("oto", this.result.repos_url)
       this.http.get<any>(this.result.repos_url).subscribe(data => {
-        console.log(data, "repos");
         this.repos = data;
       })
     }
